@@ -1,29 +1,29 @@
-(function(){
-  
-  let screen = document.querySelector('.screen');
-  let buttons = document.querySelectorAll('.btn');
-  let clear = document.querySelector('.btn-clear');
-  let equal = document.querySelector('.btn-equal');
-  
-  //retrieve data from numbers that are clicked
-  buttons.forEach(function(button){
-    button.addEventListener('click', function(e){
-      let value = e.target.dataset.num;
-      screen.value += value;
-    })
-  });
-  
-  equal.addEventListener('click', function(e){
-    if(screen.value === ''){
-      screen.value = 'Please Enter a Value';
-    } else {
-      let answer = eval(screen.value);
-      screen.value = answer;
-    }
-  })
-  
-  clear.addEventListener('click', function(e){
-    screen.value = '';
-  })
- 
-})();
+function forclear() {
+	document.getElementById("output").innerHTML = "0";
+}
+
+function removeZero() {
+      var value = document.getElementById("output").innerHTML;
+      if (value == "0") {
+           value = " "
+           document.getElementById("output").innerHTML = value;
+      }
+}
+
+function percentage() {
+	var value = document.getElementById("output").innerHTML;
+	value = value / 100;
+	document.getElementById("output").innerHTML = value;
+}
+
+function fordisplay(value) {
+	removeZero();
+	document.getElementById("output").innerHTML += value;
+}
+
+function solve() {
+	removeZero();
+	var equation = document.getElementById("output").innerHTML;
+	var solved = eval(equation);
+	document.getElementById('output').innerHTML = solved;
+}
