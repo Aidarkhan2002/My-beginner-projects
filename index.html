@@ -1,36 +1,50 @@
 <!DOCTYPE html>
+<html>
 <head>
- <title>Calculator</title>
- <link rel="stylesheet" type="text/css" href="style.css">
- <script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<title>Calculator</title>
 </head>
-
 <body>
- <div class="calculator">
-   <input type="text" name="" id="" class="screen">
-   <div class="buttons">
-    <!-- math operations'keys -->
-    <button type="button" class="math" data-num="*">*</button>
-    <button type="button" class="math" data-num="/">/</button>
-    <button type="button" class="math" data-num="-">-</button>
-    <button type="button" class="math" data-num="+">+</button>
-    <!-- number keys -->
-    <button type="button" class="numbers" data-num="9">9</button>
-    <button type="button" class="numbers" data-num="8">8</button>
-    <button type="button" class="numbers" data-num="7">7</button>
-    <button type="button" class="numbers" data-num="6">6</button>
-    <button type="button" class="numbers" data-num="5">5</button>
-    <button type="button" class="numbers" data-num="4">4</button>
-    <button type="button" class="numbers" data-num="3">3</button>
-    <button type="button" class="numbers" data-num="2">2</button>
-    <button type="button" class="numbers" data-num="1">1</button>
-    <button type="button" class="numbers" data-num="0">0</button>
-    <!-- tool keys -->
-    <button type="button" class="btn-equal numbers">=</button>
-    <button type="button" class="btn-clear numbers">C</button>
-    <button type="button" class="btn-decimal numbers" data-num=".">.</button>
-   </div>
- </div>
+<div class="calculator">
+	<!-- Display screen -->
+	<div class="display">
+		<p id="output">0</p>
+	</div>
+	<!-- First row -->
+	<div class="first-row">
+		<button onclick="forclear()">C</button>
+		<button>()</button>
+		<button id="r1-3" value="%" onclick="percentage()">%</button>
+		<button id="r1-4" value="/" onclick="fordisplay('/')">/</button>
+	</div>
+	<!-- Second row -->
+	<div class="second-row">
+		<button value="7" onclick="fordisplay('7')">7</button>
+		<button value="8" onclick="fordisplay('8')">8</button>
+		<button value="9" onclick="fordisplay('9')">9</button>
+		<button value="*" onclick="fordisplay('*')">*</button>
+	</div>
+	<!-- Third row -->
+	<div class="third-row">
+		<button value="4" onclick="fordisplay('4')">4</button>
+		<button value="5" onclick="fordisplay('5')">5</button>
+		<button value="6" onclick="fordisplay('6')">6</button>
+		<button value="-" onclick="fordisplay('-')">-</button>
+	</div>
+	<!-- Forth row -->
+	<div class="forth-row">
+		<button value="1" onclick="fordisplay('1')">1</button>
+		<button value="2" onclick="fordisplay('2')">2</button>
+		<button value="3" onclick="fordisplay('3')">3</button>
+		<button value="+" onclick="fordisplay('+')">+</button>
+	</div>
+	<!-- Fifth row -->
+	<div class="fifth-row">
+		<button id="r5-1" value="0" onclick="fordisplay('0')" style="width: 93px;">0</button>
+		<button id="r5-2" value="=" onclick="solve()" style="width: 93px;">=</button>
+	</div>
+	<h1 style="color: white; font-size: 45px; text-align: center;">CASIO</h1>
+</div>
 </body>
-
 </html>
